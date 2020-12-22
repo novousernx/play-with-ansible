@@ -4,6 +4,11 @@
   become: true
 
   tasks:
+
+  - name: update repository index
+    pacman:
+      update_cache: yes
+
   - name: install packages
     package:
       name:
